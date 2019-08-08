@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <math.h>
 
 int main()
 {
@@ -98,7 +99,7 @@ int main()
     */
     
     /* Maximum number that can be stored in unsigned decimal 
-    ffff ffff == 16^8 -1 == 4 294 967 295 since from 0 to 2^32
+    ffff ffff == 16^8 -1 == 4 294 967 295 since from 0 to 2^32 -1
     
     Unsigned binary numbers are, by definition, positive numbers and thus do not require an arithmetic sign. 
     An m-bit unsigned number represents all numbers in the range 0 to 2^m − 1. 
@@ -112,10 +113,25 @@ int main()
     
     2^31 − 1  == 2,147,483,647 for signed Basically 7FFF FFFF in hexadecimal
     Let's test this then*/
-    unsigned int a = -1;
-    printf("To check overflow: %u\n", a);
-    unsigned int a = 4294967296;
-    printf("Max unsigned int %u\n", a);
+    unsigned int a = -1u;  //prevent compiler warning
+    printf("To check overflow: %u\n", a);  //To check overflow: 4294967295
+    
+    a = 4294967296u; //prevent compiler warning
+    printf("Max unsigned int %u\n", a);   //Max unsigned int 0. Overflowed.
+    
+    int b = 2147483647;  //now checking for signed int
+    printf("To check overflow: %d\n", b);  //To check overflow: 2147483647
+    b++;
+    printf("To check overflow: %d\n", b);  //To check overflow: -2147483648
+    
+    
+    // 2,122,233 will not compile. One of the questions.
+    /* abs. I mixed up with math.floor*/
+    double m = abs(-12.5);
+    printf("Absolute of m is %f", m); //12.000000
+    
+    int m = abs(-12.5);
+    printf("Absolute of m is %d", m);  //12
     
     /* Do consider donating to me when you get the job. 
        I am still wandering outside coding during my free time. It helps alot to support my family. Thanks
