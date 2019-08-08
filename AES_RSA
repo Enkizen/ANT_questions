@@ -27,6 +27,10 @@ Asymmetric algorithms are quite slow, so key exchange works with asymmetric algo
 Both are quite easy to implement.
 
 
+https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+https://en.wikipedia.org/wiki/SHA-1
+
 # 2)What is the threats and vulnerabilities? #
 
 # 3)How do you assess them and the risks? #
