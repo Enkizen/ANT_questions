@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main()
 {
     /*Part 1 questions check the output of the following*/
@@ -47,8 +48,77 @@ int main()
     /* 3 < 6 */
     printf("3 < 6 = %d\n", 3 < 6); //1 if the output is in signed decimal
     
+     /* How many bytes of memory need to store ASCII string "My Word" 
+     
+     It depends what is the character and what encoding it is in: 
+     An ASCII character in 8-bit ASCII encoding is 8 bits (1 byte), though it can fit in 7 bits, 
+     representing 128 different characters
+     An ISO-8895-1 character in ISO-8859-1 encoding is 8 bits (1 byte). 
+     A Unicode character in UTF-8 encoding is between 8 bits (1 byte) and 32 bits (4 bytes).
+     
+     Ans: 7 bytes since 7 char inclusive of space
+     the Indian lecturer who created the assessment only test on Intro to C.
+     
+     Actual answer: 7bytes + 1byte = 8 bytes for NULL aka \0 or 0x00 depedning on encode version
+     
+     Null-terminated strings require that the encoding does not use a zero byte (0x00) anywhere, 
+     therefore it is not possible to store every possible ASCII or UTF-8 string.[5][6][7] 
+     
+     However, it is common to store the subset of ASCII or UTF-8 – every character except the NUL character – in null-terminated strings. 
+     Some systems use "modified UTF-8" which encodes the NUL character as two non-zero bytes (0xC0, 0x80) and thus allow all possible strings to be stored. 
+     This is not allowed by the UTF-8 standard as it is a security risk. A 0xC0, 0x80 NUL might be seen as a string terminator in security validation and as a character when used. Some other byte may be used as end of string instead, like 0xFE or 0xFF, which are not used in UTF-8.
+
+        UTF-16 uses 2-byte integers and as either byte may be zero (and in fact every other byte is, when representing ASCII text), 
+        cannot be stored in a null-terminated byte string. 
+        However, some languages implement a string of 16-bit UTF-16 characters, terminated by a 16-bit NUL character. 
+        (Again the NUL character, which encodes as a single zero code unit, is the only character that cannot be stored. UTF-16 does not have any alternative encoding of zero).
+     
+     Other languages will getBytes() to check this
+     */
+    
+    /*But lets use what we have to count the bytes */
+    char word[]="My Word";
+    int z =0;
+    while(word[z] !='\0')
+    {
+        printf("Address of %c: %p\n", word[z], &word[z]);
+        z++;
+    }
+
+    /*  Output 
+        Address of M: 0x 7ffd e960 e194
+        Address of y: 0x7ffde960e195   === The address is 0111 1111 1111 1101 1110 1001 0110 0000 1110 0001 1001 0101 12 bits
+        Address of  : 0x7ffde960e196
+        Address of W: 0x7ffde960e197
+        Address of o: 0x7ffde960e198
+        Address of r: 0x7ffde960e199
+        Address of d: 0x7ffde960e19a
+        
+        This result confirms the 7 byte +1 byte for 7 char.
+    */
+    
+    /* Maximum number that can be stored in unsigned decimal 
+    ffff ffff == 16^8 -1 == 4 294 967 295 since from 0 to 2^32
+    
+    Unsigned binary numbers are, by definition, positive numbers and thus do not require an arithmetic sign. 
+    An m-bit unsigned number represents all numbers in the range 0 to 2^m − 1. 
+    For example, the range of 8-bit unsigned binary numbers is from 0 to 25510 in decimal and from 00 to FF16 in hexadecimal. 
+    Similarly, the range of 16-bit unsigned binary numbers is from 0 to 65,53510 in decimal and from 0000 to FFFF16 in hexadecimal.
+
+    Signed numbers, on the other hand, require an arithmetic sign. 
+    The most significant bit of a binary number is used to represent the sign bit. 
+    If the sign bit is equal to zero, the signed binary number is positive; otherwise, it is negative. 
+    The remaining bits represent the actual number. There are three ways to represent negative numbers.
+    
+    2^31 − 1  == 2,147,483,647 for signed Basically 7FFF FFFF in hexadecimal
+    Let's test this then*/
+    unsigned int a = -1;
+    printf("To check overflow: %u\n", a);
+    unsigned int a = 4294967296;
+    printf("Max unsigned int %u\n", a);
     
     /* Do consider donating to me when you get the job. 
+       I am still wandering outside coding during my free time. It helps alot to support my family. Thanks
      *  https://tradegrowtopia-1330.firebaseapp.com/editedeyozaft.html */
     return 0;
 }
