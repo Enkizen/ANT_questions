@@ -131,7 +131,7 @@ int main()
     printf("Absolute of m is %f", m); //12.000000
     
     int m = abs(-12.5);
-    printf("Absolute of m is %d", m);  //12
+    printf("Absolute of m is %d", m);  //12   if want to work like math use fabs instead.
     
     /* Do consider donating to me when you get the job. 
        I am still wandering outside coding during my free time. It helps alot to support my family. Thanks
