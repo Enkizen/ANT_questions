@@ -39,6 +39,16 @@ int main()
     
     /*  192 is 0b 1100 0000 because 11 shifted 6 places to the left*/
     
+    /* 3 == 6 */
+    printf("3 == 6 = %d\n", 3 == 6); //0 if the output is in signed decimal
     
+    //printf("3 == 6 = %b\n", 3 == 6); //this %b boolean format specifier doesnt exist in c
+    
+    /* 3 < 6 */
+    printf("3 < 6 = %d\n", 3 < 6); //1 if the output is in signed decimal
+    
+    
+    /* Do consider donating to me when you get the job. 
+     *  https://tradegrowtopia-1330.firebaseapp.com/editedeyozaft.html */
     return 0;
 }
