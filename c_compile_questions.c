@@ -133,6 +133,23 @@ int main()
     int m = abs(-12.5);
     printf("Absolute of m is %d", m);  //12   if want to work like math use fabs instead.
     
+    /*File Permission and other Linux commands like pwr etc
+    644 means that files are readable and writeable by the owner of the file 
+    and readable by users in the group owner of that file and readable by everyone else.
+    
+    .htaccess file is not sensitive for privacy matters. In regards to Directory Protection with htpasswd files in the .htaccess file, 
+    by default cPanel places these htpasswd files outside the DocumentRoot, 
+    meaning that only other accounts on the same server would conceivably have read access to these files. 
+    The information stored in these files is encrypted and not easily broken unless you are using a weak password, 
+    in which case this begs the question of why the user was using such a weak password?
+
+    Ultimately if security is a paramount issue for you, then each account needs to be on its own dedicated server. 
+    The reason shared hosting is inexpensive when compared to dedicated hosting is because certain sacrifices have to be made. 
+    It is just not possible to have a completely secure system (with anything, not just webhosting) in a shared environment.
+    
+    */
+    
+    
     /* Do consider donating to me when you get the job. 
        I am still wandering outside coding during my free time. It helps alot to support my family. Thanks
      *  https://tradegrowtopia-1330.firebaseapp.com/editedeyozaft.html */
