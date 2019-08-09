@@ -150,6 +150,16 @@ int main()
     */
     
     
+    /* What is the default filesystem for Windows?
+       Ans: NTFS NT File System
+       
+       What is the default filesystem for MacOS? 
+       Ans: HFS+ Herarchical File System 
+       
+       What is the native filesystem to Linux? 
+       Ans: EXT 2, 3 and 4 
+     */  
+       
     /* Do consider donating to me when you get the job. 
        I am still wandering outside coding during my free time. It helps alot to support my family. Thanks
      *  https://tradegrowtopia-1330.firebaseapp.com/editedeyozaft.html */
