@@ -51,4 +51,14 @@ Stuxnet campaign 4 Microsoft Windows 0-days were used together to compromise
 Infected machine with internet access which connects to and infects another machine without internet access
 Through todaysfutbol.com and premierfutbol.com.
 
+Zerodium Payouts for Mobile
+RJB Remote Jailbreak with Persistence
+RCE Remote Code Execution
+LPE Local Privilege Escalation
+SBX Sandbox Escape or Bypass
 
+2m iPhone RJB Zero Click
+1.5 m iPhone RJB
+1m WhatsApp RCE+LPE, SMS/MMS RCE+LPE, IMessage
+
+100k WiFi RCE, Code Signing Bypass, Passcode Bypass and Touch ID Bypass, Pin Bypass
