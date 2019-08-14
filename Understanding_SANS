@@ -3402,3 +3402,327 @@ Penetration Testing
 System Hardening
 Malware Analysis
 Digital Forensics and Incident Response
+
+SEC530: Defensible Security Architecture and Engineering
+
+NOTE: The term "architecture" is interpreted differently by different organizations and in various regions of the world. This course focuses on strategic and technical application and use cases, including fine-tuning and implementing various infrastructure components and cyber defense techniques. If you are expecting the course to focus exclusively on strategic solution placement and use cases, the course is not for you.
+
+SEC530: Defensible Security Architecture and Engineering is designed to help students establish and maintain a holistic and layered approach to security. Effective security requires a balance between detection, prevention, and response capabilities, but such a balance demands that controls be implemented on the network, directly on endpoints, and within cloud environments. The strengths and weaknesses of one solution complement another solution through strategic placement, implementation, and fine-tuning.
+
+To address these issues, this course focuses on combining strategic concepts of infrastructure and tool placement while also diving into their technical application. We will discuss and identify what solutions are available and how to apply them successfully. Most importantly, we'll evaluate the strengths and weaknesses of various solutions and how to layer them cohesively to achieve defense-in-depth.
+
+The changing threat landscape requires a change in mindset, as well as a repurposing of many devices. Where does this leave our classic perimeter devices such as firewalls? What are the ramifications of the "encrypt everything" mindset for devices such as Network Intrusion Detection Systems?
+
+In this course, students will learn the fundamentals of up-to-date defensible security architecture and how to engineer it. There will be a heavy focus on leveraging current infrastructure (and investment), including switches, routers, and firewalls. Students will learn how to reconfigure these devices to significantly improve their organizations' prevention capabilities in the face of today's dynamic threat landscape. The course will also delve into the latest technologies and their capabilities, strengths, and weaknesses. You will come away with recommendations and suggestions that will aid in building a robust security infrastructure.
+
+While this is not a monitoring course, it will dovetail nicely with continuous security monitoring, ensuring that security architecture not only supports prevention but also provides the critical logs that can be fed into a Security Information and Event Management (SIEM) system in a Security Operations Center.
+
+Multiple hands-on labs conducted daily will reinforce key points in the course and provide actionable skills that students will be able to leverage as soon as they return to work.
+
+
+This first section of the course describes hardening systems and networks, beginning with the overall network architecture and layers. To quote Richard Bejtlich's The Tao of Network Security Monitoring, defensible networks "encourage, rather than frustrate, digital self-defense."
+
+The section begins with an overview of traditional network and security architectures and their common weaknesses. The defensible security mindset is "build it once, build it right." All networks must perform their operational functions effectively, and security can complement this goal. It is much more efficient to bake security in at the outset than to retrofit it later.
+
+The discussion will then turn to lower layer networking concepts, including many "ripped from the headlines" tips the co-authors have successfully deployed in the trenches to harden infrastructure in order to prevent and detect modern attacks. Examples include the use of private VLANs, which effectively kills the malicious client-to-client pivot, and 802.1X and NAC, which mitigate rogue devices. Specific Cisco IOS syntax examples are provided to harden switches.
+
+Exercises
+Egress Analysis: The focus is on understanding how attackers exfiltrate data and how to prevent and detect exfiltration.
+Cisco Passwords: Default settings can lead to a major compromise. This lab focuses on the impact of not changing default settings on network infrastructure.
+Identifying Layer 2 Attacks: Network security has increased, yet layer 2 attacks still are possible in a modern organization. The focus of this lab is on identifying layer 2 attacks.
+Flow Analysis: This lab is about understanding the various forms of flow data and how to properly use them to identify unauthorized or anomalous activity
+CPE/CMU Credits: 6
+
+Topics
+Traditional Security Architecture Deficiencies
+Emphasis on Perimeter/Exploitation
+Lack of a True Perimeter ("De-perimeterization" as a Result of Cloud/Mobile)
+The Internet of Things
+Predominantly Network-centric
+Defensible Security Architecture
+Mindset
+Presumption of Compromise
+De-perimeterization
+Predominantly Network-centric
+Models
+Zero-Trust Model (Kindervag - Forrester)
+Intrusion Kill Chain
+Diamond Model of Intrusion Analysis
+Software-defined Networking and Virtual Networking
+Micro-Segmentation
+Threat, Vulnerability, and Data Flow Analysis
+Threat Vector Analysis
+
+Data Ingress Mapping
+Data Exfiltration Analysis
+
+Data Egress Mapping
+Detection Dominant Design
+Attack Surface Analysis
+Visibility Analysis
+Layer 1 Best Practices
+Network Closets
+Penetration Testing Dropboxes
+USB Keyboard Attacks (Rubber Ducky)
+Layer 2 Best Practices
+VLANs
+Hardening
+Private VLANs
+Layer 2 Attacks and Mitigation
+NetFlow
+Layer 2 and 3 NetFlow
+NetFlow, Sflow, Jflow, VPC Flow, Suricata and Endpoint Flow
+
+This section develops the discussion on hardening infrastructure and moves on to concepts such as routing devices, firewalls, and application proxies. Actionable examples are provided for hardening routers, with specific Cisco IOS commands to perform each step.
+
+The section then continues with a deep dive on IPv6, which currently accounts for 23 percent of Internet backbone traffic, according to Google, while simultaneously being used and ignored by most organizations. We will provide deep background on IPv6, discuss common mistakes (such as applying an IPv4 mindset to IPv6), and provide actionable solutions for securing the protocol. The section wraps up with a discussion on firewalls and application proxies.
+
+Exercises
+Auditing Router Security: The focus of this lab is on identifying and mitigating security issues in routers.
+Router SNMP Security: In this lab, students will interact with cloud routers and perform attacks against SNMP to understand them and, ultimately, to remove the threat
+IPv6: The Next Generation Internet Protocol, also known as IPv6, is often ignored and misunderstood. This lab allows students to interact with IPv4 and IPv6 to be more familiar with some of the differences.
+Proxy Power: Proxies have immense capabilities in dealing with malware and command and control channels. This lab walks students through what would happen to malware phoning home based on the different ways a proxy can be configured.
+Bonus Lab: The end of the day features a router lab in which students combine multiple components of book 1 and book 2 in a live-fire configuration and tuning of routers.
+CPE/CMU Credits: 6
+
+Topics
+Layer 3: Router Best Practices
+
+CIDR and Subnetting
+Layer 3 Attacks and Mitigation
+IP Source Routing
+ICMP Attacks
+Unauthorized Routing Updates
+Securing Routing Protocols
+Unauthorized Tunneling (Wormhole Attack)
+Layer 2 and 3 Benchmarks and Auditing Tools
+Baselines
+CISecurity
+Cisco's Best Practices
+Cisco Autosecure
+DISA STIGs
+Nipper-ng
+Securing SNMP
+SNMP Community String Guessing
+Downloading the Cisco IOS Config via SNMP
+Hardening SNMP
+SNMPv3
+Securing NTP
+NTP Authentication
+NTP Amplification Attacks
+Bogon Filtering, Blackholes, and Darknets
+Bogon Filtering
+Monitoring Darknet Traffic
+Building an IP Blackhole Packet Vacuum
+IPv6
+Dual-Stack Systems and Happy Eyeballs
+IPv6 Extension Headers
+IPv6 Addressing and Address Assignment
+Securing IPv6
+IPv6 Firewall Support
+Scanning IPv6
+IPv6 Tunneling
+IPv6 Router Advertisement Attacks and Mitigation
+VPN
+Path MTU Issues
+Fragmentation Issues Commonly Caused by VPN
+Layer 3/4 Stateful Firewalls
+Router ACLs
+Linux and BSD Firewalls
+pfSense
+Stateful
+Proxy
+Web Proxy
+SMTP Proxy
+
+Augmenting with Phishing Protection and Detection Mechanisms
+Explicit vs. Transparent
+Forward vs. Reverse
+
+Organizations own or have access to many network-based security technologies, ranging from Next-Generation Firewalls to web proxies and malware sandboxes. Yet the effectiveness of these technologies is directly affected by their implementation. Too much reliance on built-in capabilities like application control, antivirus, intrusion prevention, data loss prevention, or other automatic evil-finding deep packet inspection engines leads to a highly preventative-focused implementation, with huge gaps in both prevention and detection.
+
+This section focuses on using application-layer security solutions that an organization already owns with a modern mindset. By thinking outside the box, even old controls like a spam appliance can be used to catch modern attacks such as phishing via cousin domains and other spoofing techniques. And again, by engineering defenses for modern attacks, both prevention and detection capabilities gain significantly.
+
+Exercises
+Network Security Monitoring: Intrusion detection alerts and network metadata provide a holistic approach to knowing thyself and identifying unauthorized activity. This lab focuses on detecting malware operating over the network with NSM.
+NSM Architecture and Engineering: In this lab, students will learn how to place and implement NSM technologies for proper visibility and application/protocol awareness.
+Encryption Considerations; Network encryption protects data from being observed both by attackers and defenders. This lab focuses on how defenders can interact with TLS connections to gain back visibility for inspection in proxies, NSM, NGFW, and other solutions.
+CPE/CMU Credits: 6
+
+Topics
+NGFW
+Application Filtering
+Implementation Strategies
+NIDS/NIPS
+IDS/IPS Rule Writing
+Snort
+Suricata
+Bro
+Network Security Monitoring
+Power of Network Metadata
+Know Thy Network
+Sandboxing
+Beyond Inline
+Integration with Endpoint
+Feeding the Sandbox Potential Specimens
+Malware Detonation Devices
+Encryption
+The "Encrypt Everything" Mindset
+
+Internal and External
+Free SSL/TLS Certificate Providers
+SSL/SSH Inspection
+SSL/SSH Decrypt Dumps
+SSL Decrypt Mirroring
+Certificate Pinning
+
+Malware Pins
+HSTS
+Crypto Suite Support
+
+Qualys SSL Labs
+Secure Remote Access
+Access into Organization
+Dual Factor for All Remote Access (and More)
+
+Google Authenticator/TOTP: Open Authentication
+IPSec VPNs
+SSH VPNs
+SSL/TLS VPN
+Jump Boxes
+Distributed Denial-of-Service
+Impact of Internet of Things
+Types of Attacks
+Mitigation Techniques
+
+Organizations cannot protect something they do not know exists. The problem is that critical and sensitive data exist all over. Complicating this even more is that data are often controlled by a full application stack involving multiple services that may be hosted on-premise or in the cloud.
+
+This section focuses on identifying core data where they reside and how to protect those data. Protection includes using data governance solutions and full application stack security measures such as web application firewalls and database activity monitoring, as well as keeping a sharp focus on securing the systems hosting core services such as on-premise hypervisors, cloud computing platforms, and container services such as Docker.
+
+The data-centric security approach focuses on what is core to an organization and prioritizes security controls around it. Why spend copious amounts of time and money securing everything when controls can be optimized and focused on securing what matters? Let's face it: Some systems are more critical than others.
+
+Exercises
+Securing Web Applications: In this lab, students will identify the prevention and detection capabilities that web application firewalls provide, and also learn where they can be evaded. Then changes will be applied to block and detect evasion techniques.
+
+Discovering Sensitive Data: Identifying where sensitive data reside is difficult but necessary. You cannot control data if you do not know where those data reside. This lab walks students step-by-step through writing a PowerShell script in order to crawl through a file system looking for sensitive data.
+
+Secure Virtualization: The focus of this lab is on showing the implication of attackers gaining host access to a hypervisor or container system, and also on various hardening and incident handling steps that can be taken
+
+CPE/CMU Credits: 6
+
+Topics
+Application (Reverse) Proxies
+Full Stack Security Design
+Web Server
+App Server
+DB Server
+Web Application Firewalls
+Whitelisting and Blacklisting
+WAF Bypass
+Normalization
+Dynamic Content Routing
+Database Firewalls/Database Activity Monitoring
+Data Masking
+Advanced Access Controls
+Exfiltration Monitoring
+File Classification
+Data Discovery
+Scripts vs. Software Solutions
+Find Sensitive Data in Databases or Files/Folders
+Advanced Discovery Techniques such as Optical Character Recognition Scanning of Pictures and Saved Scan Files
+Methods of Classification
+Dynamic Access Control
+Data Loss Prevention (DLP)
+Network-based
+Endpoint-based
+Cloud Application Implementations
+Data Governance
+Policy Implementation and Enforcement
+Access Controls vs. Application Enforcement and Encryption
+Auditing and Restrictions
+Mobile Device Management (MDM) and Mobile Application Management (MAM)
+Security Policies
+Methods for Enforcement
+End-user Experience and Impact
+Private Cloud Security
+Securing On-premise Hypervisors (vSphere, Xen, Hyper-V)
+Network Segmentation (Logical and Physical)
+VM Escape
+Surface Reduction
+Visibility Advantages
+Public Cloud Security
+SaaS vs. PaaS vs. IaaS
+Shared Responsibility Implications
+Cloud Strengths and Weaknesses
+Data Remanence and Lack of Network Visibility
+Container Security
+Impact of Containers on On-premise or Cloud Architectures
+Security Concerns
+Protecting against Container Escape
+
+Today, a common security mantra is "trust but verify." But this is a broken concept. Computers are capable of calculating trust on the fly, so rather than thinking in terms of "trust but verify" organizations should be implementing "verify then trust." By doing so, access can be constrained to appropriate levels at the same time that access can become more fluid.
+
+This section focuses on implementing a zero-trust architecture where trust is no longer implied but must be proven. By doing so, a model of variable trust can be used to change access levels dynamically. This, in turn, allows for implementing fewer or more security controls as necessary given a user's and a device's trust maintained over time. The focus is on implementing zero-trust architecture with existing security technologies to maximize their value and impact for an organization's security posture.
+
+During this section encryption and authentication will be used to create a hardened network, whether external or internal. Also, advanced defensive techniques will be implemented to stop modern attack tools in their tracks while leaving services fully functional for authorized assets.
+
+Exercises
+Network Isolation and Mutual Authentication: Attackers cannot attack what they cannot see or interact with. This lab shows defenders how to implement SPA or mutual TLS so that only authorized assets can connect.
+SIEM Analysis and Tactical Detection: Logging and inspecting is difficult without the right data and the proper ability to view those data. This lab shows how to use a SIEM system to find an attacker more than 10 different ways. The detection capabilities are important but the logic behind them is also important to implement variable trust conditional access across an enterprise.
+Advanced Defense Strategies: Attackers do not play fair and neither should defenders. In this lab, students will configure services to identify attacks in a way that internal systems continue to function but attack tools do not. Also, specialized detection honeytokens will be implemented to identify attackers cloning a public site and using it against your staff or external clients
+CPE/CMU Credits: 6
+
+Topics
+Zero Trust Architecture
+Why Perimeter Security Is Insufficient
+What Zero Trust Architecture Means
+"Trust but Verify" vs. "Verify then Trust"
+Implementing Variable Access
+Logging and Inspection
+Network Agent-based Identity Controls
+Credential Rotation
+Certificates
+Passwords and Impact of Rotation
+Endpoints
+Compromised Internal Assets
+Pivoting Adversaries
+Insider Threat
+Securing the Network
+Authenticating and Encrypting Endpoint Traffic
+Domain Isolation (Making Endpoint Invisible to Unauthorized Parties)
+Mutual TLS
+Single Packet Authorization
+Tripwire and Red Herring Defenses
+Honeynets, Honeypots, and Honeytokens
+Single Access Detection Techniques
+Proactive Defenses to Change Attacker Tool Behaviors
+Increasing Prevention Capabilities while Adding Solid Detection
+Patching
+
+Automation via Scripts
+Deputizing Endpoints as Hardened Security Sensors
+End-user Privilege Reduction
+Application Whitelisting
+Host Hardening
+
+EMET
+Host-based IDS/IPS
+
+As Tripwires
+Endpoint Firewalls
+
+Pivot Detection
+Scaling Endpoint Log Collection/Storage/Analysis
+How to Enable Logs that Matter
+Designing for Analysis Rather than Log Collection
+
+The course culminates in a team-based Design-and-Secure-the-Flag competition. Powered by NetWars, day six provides a full day of hands-on work applying the principles taught throughout the week. Your team will progress through multiple levels and missions designed to ensure mastery of the modern cyber defense techniques promoted throughout this course. Teams will assess, design, and secure a variety of computer systems and devices, leveraging all seven layers of the OSI model.
+
+CPE/CMU Credits: 6
+
+Topics
+Capstone - Design/Detect/Defend
+Defensible Security Architecture
+Assess Provided Architecture and Identify Weaknesses
+Use Tools/Scripts to Assess the Initial State
+Quickly/Thoroughly Find All Changes Made
