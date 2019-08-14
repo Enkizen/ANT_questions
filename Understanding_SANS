@@ -1,0 +1,83 @@
+https://www.sans.org/event/october-singapore-2019
+
+# FOR508: Advanced Incident Response, Threat Hunting, and Digital Forensics	GCFA	Joshua Lemon #
+
+# SEC401: Security Essentials Bootcamp Style	GSEC	Ross Bergman #
+
+# SEC487: Open-Source Intelligence (OSINT) Gathering and Analysis	Micah Hoffman#
+—
+
+# SEC501: Advanced Security Essentials - Enterprise Defender	GCED	Bryce Galbraith #
+
+# SEC503: Intrusion Detection In-Depth	GCIA	Andrew Laman #
+
+Course Syllabus and Course Contents
+
+Day 1/2: Fundamentals of Traffic Analysis
+
+Why you should capture and be able to analyze packets
+Understanding bits, bytes, binary, and hexadecimal
+TCP/IP concepts
+Using tcpdump and Wireshark and their filtering techniques
+Link layer, IPv4, IPv6, and fragmentation
+Transport layers TCP, UDP, and ICMP
+Day 3: Application Protocols
+
+Scapy
+HTTP
+SMTP
+Microsoft protocols
+DNS
+IDS evasions
+Day 4: Network Monitoring: Signatures vs. Behaviors
+
+Architecture for network monitoring
+Running, installing, configuring, and customizing Snort
+Writing Snort rules
+Running, installing, configuring, and customizing Bro
+Writing Bro scripts and signatures, and raising Bro notices
+Day 5: Network Traffic Forensics
+
+Hands-on experience analyzing incident scenarios
+Data-driven analysis vs. alert-driven reactions
+Hypothesis and visualization for large-scale network analysis
+Using SiLK as open-source network flow records to expose network behavior anomalies
+Understanding and detecting covert channels
+Analyzing large pcap files
+Identifying C2 activities
+Practical analysis of TLS data
+Day 6: Advanced IDS Capstone Event
+
+Collaborate with fellow students to compete in a NetWars-like IDS-specific challenge
+You Will Learn
+
+How to analyze traffic traversing your site to avoid becoming another "Hacked!" headline
+How to identify potentially malicious activities for which no IDS has published signatures
+How to place, customize, and tune your IDS/IPS for maximum detection
+Hands-on detection, analysis, and network forensic investigation with a variety of open-source tools
+TCP/IP and common application protocols to gain insight about your network traffic, enabling you to distinguish normal from abnormal traffic
+The benefits of using signature-based, flow, and hybrid traffic analysis frameworks to augment detection
+
+# SEC504: Hacker Tools, Techniques, Exploits, and Incident Handling	GCIH	Steve Anson #
+
+# SEC560: Network Penetration Testing and Ethical Hacking	GPEN	Jon Gorenflo #
+
+# SEC575: Mobile Device Security and Ethical Hacking	GMOB	Christopher Crowley #
+
+# SEC599: Defeating Advanced Adversaries - Purple Team Tactics & Kill Chain Defenses	GDAT	Bryce Galbraith #
+
+# SEC617: Wireless Penetration Testing and Ethical Hacking	GAWN	Larry Pesce #
+
+# SEC660: Advanced Penetration Testing, Exploit Writing, and Ethical Hacking	GXPN	Brandon McCrillis #
+
+# FOR500: Windows Forensic Analysis	GCFE	Ovie Carroll Phill Moore #
+
+# FOR572: Advanced Network Forensics: Threat Hunting, Analysis, and Incident Response	GNFA	Philip Hagen #
+
+# LEG523: Law of Data Security and Investigations	GLEG	Benjamin Wright #
+
+# ICS410: ICS/SCADA Security Essentials	GICSP	Justin Searle #
+
+# Core NetWars Tournament - Add-on #
+(FREE with any 4-6 Day SANS Course Registration)	Bryce Galbraith
+
