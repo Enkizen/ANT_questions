@@ -45,3 +45,10 @@ CIS Critical security controls
 2. Inventory and Control of Software Assets
 
 Example Equifax was compromised due to an unpatched web application compiled with a vulnerable Apache Struts2 framework
+
+Useful 0-Days are very expensive.
+Stuxnet campaign 4 Microsoft Windows 0-days were used together to compromise
+Infected machine with internet access which connects to and infects another machine without internet access
+Through todaysfutbol.com and premierfutbol.com.
+
+
